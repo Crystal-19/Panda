@@ -1,0 +1,431 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta name='viewport' content='width=devide-width; initial-scale=1.0;'>
+        <title> diary </title> 
+        <style>
+            .container{
+                display: flex;
+                flex-flow: column;
+                margin: 10px 30px 10px 30px;
+                justify-content: center;
+                align-items: center;
+            }
+            .row{
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .cell{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: solid pink;
+                color: rgb(255, 184, 215);
+                width: 200px;
+                height: 200px;
+                font-size: 150%;
+            }
+            .popup {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+/* The actual popup */
+            .popup .popuptext {
+                visibility: hidden;
+                width: 400px;
+                height: 400px;
+                background-color:pink;
+                color: rgb(128, 125, 126);
+                text-align: center;
+                border-radius: 6px;
+                padding: 8px 0;
+                position: fixed;
+            }               
+
+/* Popup arrow */
+            .popup .popuptext::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                
+            }
+
+/* Toggle this class - hide and show the popup */
+            .popup .show {
+                visibility: visible;
+                -webkit-animation: fadeIn 1s;
+                animation: fadeIn 1s;
+            }
+
+/* Add animation (fade in the popup) */
+            @-webkit-keyframes fadeIn {
+                from {opacity: 0;} 
+                to {opacity: 1;}
+            }
+
+            @keyframes fadeIn {
+                from {opacity: 0;}
+                to {opacity:1 ;}
+            }
+            .popup1 {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+/* The actual popup */
+            .popup1 .popuptext1 {
+                visibility: hidden;
+                width: 400px;
+                height: 400px;
+                background-color:pink;
+                color: rgb(128, 125, 126);
+                text-align: center;
+                border-radius: 6px;
+                padding: 8px 0;
+                position: fixed;
+            }               
+
+/* Popup arrow */
+            .popup1 .popuptext1::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                
+            }
+
+/* Toggle this class - hide and show the popup */
+            .popup1 .show1 {
+                visibility: visible;
+                -webkit-animation: fadeIn 1s;
+                animation: fadeIn 1s;
+            }
+
+/* Add animation (fade in the popup) */
+            @-webkit-keyframes fadeIn {
+                from {opacity: 0;} 
+                to {opacity: 1;}
+            }
+
+            @keyframes fadeIn {
+                from {opacity: 0;}
+                to {opacity:1 ;}
+            }      
+        </style>
+    </head>
+    <div class='container'>
+        <div class='row'>
+            <div class='cell'>
+            <div class="popup" onclick="myFunction()"> 1997
+                <span class="popuptext" id="myPopup">
+                    I was an adolescent girl !
+            <br>I love STEM subject, but I studied economics major in college,
+            because of this mistake, I hardly ever enjoyed my campus life,
+            <br>It was a dark period :((
+                </span> </div>
+                <script>
+                    function myFunction() {
+                      var popup = document.getElementById("myPopup");
+                      popup.classList.toggle("show");
+                    }
+                </script>
+            </div>
+            <div class='cell'>
+            <div class="popup" onclick="myFunction()"> 1998
+                <span class="popuptext" id="aaa"></span> </div>
+                <script>
+                    function myFunction() {
+                        var popup = document.getElementById("aaa");
+                        popup.classList.toggle("show");
+                        }
+                </script>
+            </div>
+            <div class='cell'>
+            <div class="popup" onclick="myFunction()"> 1999
+                <span class="popuptext" id="myPopup"></span> </div>
+                <script>
+                    function myFunction() {
+                      var popup = document.getElementById("myPopup");
+                      popup.classList.toggle("show");
+                    }
+                </script>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='cell'>
+                <div class="popup" onclick="myFunction()"> 2000
+                    <span class="popuptext" id="myPopup"></span> </div>
+                    <script>
+                        function myFunction() {
+                          var popup = document.getElementById("myPopup");
+                          popup.classList.toggle("show");
+                        }
+                    </script>
+                </div>
+                <div class='cell'>
+                    <div class="popup" onclick="myFunction()"> 2001
+                        <span class="popuptext" id="myPopup"></span> </div>
+                        <script>
+                            function myFunction() {
+                              var popup = document.getElementById("myPopup");
+                              popup.classList.toggle("show");
+                            }
+                        </script>
+                    </div>
+                    <div class='cell'>
+                        <div class="popup" onclick="myFunction()"> 2002
+                            <span class="popuptext" id="myPopup"></span> </div>
+                            <script>
+                                function myFunction() {
+                                  var popup = document.getElementById("myPopup");
+                                  popup.classList.toggle("show");
+                                }
+                            </script>
+                        </div>
+        </div>
+        <div class='row'>
+            <div class='cell'>
+                <div class="popup" onclick="myFunction()"> 2003
+                    <span class="popuptext" id="myPopup"></span> </div>
+                    <script>
+                        function myFunction() {
+                          var popup = document.getElementById("myPopup");
+                          popup.classList.toggle("show");
+                        }
+                    </script>
+                </div>
+                <div class='cell' style='background:rgb(250, 226, 231); color: rgb(240, 106, 128);'>
+                    <div class="popup" onclick="myFunction()"> 2004
+                        <span class="popuptext" id="myPopup"></span> </div>
+                        <script>
+                            function myFunction() {
+                              var popup = document.getElementById("myPopup");
+                              popup.classList.toggle("show");
+                            }
+                        </script>
+                    </div>
+                    <div class='cell'>
+                        <div class="popup" onclick="myFunction()"> 2005
+                            <span class="popuptext" id="myPopup"></span> </div>
+                            <script>
+                                function myFunction() {
+                                  var popup = document.getElementById("myPopup");
+                                  popup.classList.toggle("show");
+                                }
+                            </script>
+                        </div>
+        </div>
+        <div class='row'>
+            <div class='cell'>
+                <div class="popup" onclick="myFunction()"> 2006
+                    <span class="popuptext" id="myPopup"></span> </div>
+                    <script>
+                        function myFunction() {
+                          var popup = document.getElementById("myPopup");
+                          popup.classList.toggle("show");
+                        }
+                    </script>
+                </div>
+                <div class='cell'>
+                    <div class="popup" onclick="myFunction()"> 2007
+                        <span class="popuptext" id="myPopup"></span> </div>
+                        <script>
+                            function myFunction() {
+                              var popup = document.getElementById("myPopup");
+                              popup.classList.toggle("show");
+                            }
+                        </script>
+                    </div>
+                    <div class='cell'>
+                        <div class="popup" onclick="myFunction()"> 2008
+                            <span class="popuptext" id="myPopup"></span> </div>
+                            <script>
+                                function myFunction() {
+                                  var popup = document.getElementById("myPopup");
+                                  popup.classList.toggle("show");
+                                }
+                            </script>
+                        </div>
+        </div>
+        <div class='row'>
+            <div class='cell'>
+                <div class="popup" onclick="myFunction()"> 2009
+                    <span class="popuptext" id="myPopup"></span> </div>
+                    <script>
+                        function myFunction() {
+                          var popup = document.getElementById("myPopup");
+                          popup.classList.toggle("show");
+                        }
+                    </script>
+                </div>
+                <div class='cell' style='background:rgb(250, 226, 231); color: rgb(240, 106, 128);'>
+                    <div class="popup" onclick="myFunction()"> 2010
+                        <span class="popuptext" id="myPopup"></span> </div>
+                        <script>
+                            function myFunction() {
+                              var popup = document.getElementById("myPopup");
+                              popup.classList.toggle("show");
+                            }
+                        </script>
+                    </div>
+                    <div class='cell'>
+                        <div class="popup" onclick="myFunction()"> 2011
+                            <span class="popuptext" id="myPopup"></span> </div>
+                            <script>
+                                function myFunction() {
+                                  var popup = document.getElementById("myPopup");
+                                  popup.classList.toggle("show");
+                                }
+                            </script>
+                        </div>
+        </div>
+        <div class='row'>
+            <div class='cell'>
+                <div class="popup" onclick="myFunction()"> 2012
+                    <span class="popuptext" id="myPopup"></span> </div>
+                    <script>
+                        function myFunction() {
+                          var popup = document.getElementById("myPopup");
+                          popup.classList.toggle("show");
+                        }
+                    </script>
+                </div>
+                <div class='cell'>
+                    <div class="popup" onclick="myFunction()"> 2013
+                        <span class="popuptext" id="myPopup"></span> </div>
+                        <script>
+                            function myFunction() {
+                              var popup = document.getElementById("myPopup");
+                              popup.classList.toggle("show");
+                            }
+                        </script>
+                    </div>
+                    <div class='cell'>
+                        <div class="popup" onclick="myFunction()"> 2014
+                            <span class="popuptext" id="myPopup"></span> </div>
+                            <script>
+                                function myFunction() {
+                                  var popup = document.getElementById("myPopup");
+                                  popup.classList.toggle("show");
+                                }
+                            </script>
+                        </div>
+        </div>
+        <div class='row'>
+            <div class='cell' style='background:rgb(250, 226, 231); color: rgb(240, 106, 128);'>
+                <div class="popup" onclick="myFunction()"> 2015
+                    <span class="popuptext" id=""> dsfdc </span></div>
+                    <script>
+                        function myFunction() {
+                          var popup = document.getElementById("");
+                          popup.classList.toggle("show");
+                        }
+                    </script>
+                </div>
+                <div class='cell'>
+                    <div class="popup" onclick="myFunction()"> 2016
+                        <span class="popuptext" id="myPopup"></span></div>
+                        <script>
+                            function myFunction() {
+                              var popup = document.getElementById("myPopup");
+                              popup.classList.toggle("show");
+                            }
+                        </script>
+                    </div>
+                    <div class='cell'>
+                        <div class="popup" onclick="myFunction()"> 2017
+                            <span class="popuptext" id="myPopup"></span> </div>
+                            <script>
+                                function myFunction() {
+                                  var popup = document.getElementById("myPopup");
+                                  popup.classList.toggle("show");
+                                }
+                            </script>
+                        </div>
+        </div>
+        <div class='row'>
+            <div class='cell'>
+                <div class="popup" onclick="myFunction()"> 2018
+                    <span class="popuptext" id="myPopup"></span> </div>
+                    <script>
+                        function myFunction() {
+                          var popup = document.getElementById("myPopup");
+                          popup.classList.toggle("show");
+                        }
+                    </script>
+                </div>
+                <div class='cell' style='background:rgb(250, 226, 231); color: rgb(240, 106, 128);'>
+                    <div class="popup1" onclick="myFunction()"> 2019
+                        <span class="popuptext1" id="my"> edsed</span> </div>
+                        <script>
+                            function myFunction() {
+                              var popup = document.getElementById("my");
+                              popup.classList.toggle("show1");
+                            }
+                        </script>
+                    </div>
+                    <div class='cell'>
+                        <div class="popup" onclick="myFunction()"> 2020
+                            <span class="popuptext" id="myPopup"></span> </div>
+                            <script>
+                                function myFunction() {
+                                  var popup = document.getElementById("myPopup");
+                                  popup.classList.toggle("show");
+                                }
+                            </script>
+                        </div>
+        </div>
+        <div class='row'>
+            <div class='cell'>
+                <div class="popup" onclick="myFunction()"> 2021
+                    <span class="popuptext" id="myPopup"></span> </div>
+                    <script>
+                        function myFunction() {
+                          var popup = document.getElementById("myPopup");
+                          popup.classList.toggle("show");
+                        }
+                    </script>
+                </div>
+                <div class='cell'>
+                    <div class="popup" onclick="myFunction()"> 2022
+                        <span class="popuptext" id="myPopup"></span> </div>
+                        <script>
+                            function myFunction() {
+                              var popup = document.getElementById("myPopup");
+                              popup.classList.toggle("show");
+                            }
+                        </script>
+                    </div>
+                    <div class='cell'>
+                        <div class="popup" onclick="myFunction()"> 2023
+                            <span class="popuptext" id="myPopup"></span> </div>
+                            <script>
+                                function myFunction() {
+                                  var popup = document.getElementById("myPopup");
+                                  popup.classList.toggle("show");
+                                }
+                            </script>
+                        </div>
+        </div>
+    </div>
+</html>

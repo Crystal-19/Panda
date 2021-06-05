@@ -1,0 +1,143 @@
+<!Doctype html>
+<html>
+    <meta name='viewport' content='width=device-width initial-scale=1.0'>
+    <title> Panda Profile </title>
+    <head>
+        <script src='jquery.js'></script>
+    <style>
+        .container-header{
+            display: flex;
+            flex-flow: row;
+            background: white;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 40px;
+            width: 100%;
+        }
+        .container-icons{
+            display: flex;
+            flex-flow: row;
+            border: none;
+            justify-content: space-between;
+            width: 150px;
+            align-items: center;
+        }
+        .container-nav{
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width:100%;
+        }
+        .sub-nav{
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+        }
+        .follow{
+            display: flex;
+            flex-flow: row;
+            width: 300px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container-menu{
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+        }
+        .menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 600px;
+        }
+        
+        .a-general{
+            text-decoration: none;
+            color: gray;
+            font-size: 150%;
+        }
+        .a-general:hover{
+            background: rgb(255, 184, 215);
+        }
+        .container-footer{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            color: gray;
+        }
+        .footer{
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 500px;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+    </head>
+    <body>
+        <div class='container-header'>
+            <div style='font-family: cursive; font-size: 150%; color: rgb(255, 184, 215);'> Panda Story </div>
+            <input style='border: solid rgb(255, 184, 215);' type='text' placeholder='Search'>
+            <div class='container-icons'>
+                <a href='#home>'><img style='height: 25px; width:25px;' src='home.png' alt='home'> </a>
+                <a href='#direct>'><img style='height: 25px; width:25px;' src='direct.png' alt='home'>  </a>
+                <a href='#like>'><img style='height: 25px; width:25px;' src='like.png' alt='home'> </a>
+            </div>
+        </div>
+        <div style='background:rgb(247, 203, 222);'>
+        <div class='container-nav'>
+            <img style='height: 150px; width:150px; border-radius: 100%;' src='ava.jpeg' alt='ava'>
+            <div class='sub-nav'>
+                <h1 style='font-family:monospace; color: white;'> Pink_Panda </h1>
+                <ul style='list-style-type:none;' class='follow'>
+                    <a style='text-decoration:none; color: white; font-family:Arial, Helvetica, sans-serif; font-size: 150%;' href='#title'><li> Developer | </li></a>
+                    <a style='text-decoration:none; color: white; font-family:Arial, Helvetica, sans-serif; font-size: 100%;' href='#followers'><li> 1 follower </li></a>
+                    <a style='text-decoration:none; color: white; font-family:Arial, Helvetica, sans-serif; font-size: 100%;' href='#Following'><li> 1 following </li></a>
+                </ul>
+                <h3 style='font-family:Cambria; color:white;'> <i>a girl who loves pink and coding</i></h3>
+            </div>
+        </div>
+        </div>
+        <div class='container-menu'>
+            <div class='menu'>
+                <a id='diary' class='a-general' href='#bio'> Diary </a>
+                <a id='memory' class='a-general' href='#Memory'> Memory </a>
+                <a id='interested' class='a-general' href='#Intersted'> Interested </a>
+                <a id='image' class='a-general' href='#Image'> Image </a>
+                <a id='video' class='a-general' href='#Video'> Video </a>
+            </div>
+        </div>
+        <div id='diary-container'>
+            <iframe src='file:///Users/a9876543/Desktop/panda/diary.html' style='width:100%; height:450px;'></iframe> 
+        </div>
+        <div id='memory-container' class='hidden'>
+            <a href='#abc'> abc </a>
+        </div>
+        <div id='image-container' class='hidden'>
+            <a href='#image'> image </a>
+        </div>
+        <div class='container-footer'>
+            <div id='footer' class='footer'>
+                <a style='text-decoration:none; color: gray;' href='#about'> About</a>
+                <a style='text-decoration:none; color: gray;' href='#jobs'> Jobs</a>
+                <a style='text-decoration:none; color: gray;' href='#help'> Help</a>
+                <a style='text-decoration:none; color: gray;' href='#API'> API</a>
+                <a style='text-decoration:none; color: gray;' href='#privacy'> Privacy</a>
+                <a style='text-decoration:none; color: gray;' href='#terms'> Terms</a>
+                <a style='text-decoration:none; color: gray;' href='#top'> Top Accounts</a>
+                <a style='text-decoration:none; color: gray;' href='#hashtag'> Hashtags</a>
+                <a style='text-decoration:none; color: gray;' href='#loacations'> Locations</a>
+            </div>
+            <div> @2021 from Ngan </div>
+        </div>       
+    </body>
+</html>
