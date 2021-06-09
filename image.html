@@ -1,0 +1,112 @@
+<!Doctype html>
+<html>
+    <meta name='viewport' content='width=device-width initial-scale=1.0'>
+    <title> Image </title>
+    <head>
+        <script src='jquery.js'></script>
+    <style>
+        .image-layout{
+            display: flex;
+            flex-flow: column;
+            margin: 10px 30px 10px 30px;
+            justify-content: center;
+            align-items: center;
+            }
+        .image-row{
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-frame{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid pink;
+            color: rgb(255, 184, 215);
+            width: 200px;
+            height: 200px;
+            font-size: 150%;
+        }
+        .popup{
+            position: absolute;
+            display: inline-block;
+            width:100%;
+            height: 100%;
+        }
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('img').click(function(){
+                const popupimage = $(this).attr('style', 'width:500px; height:500px;').addClass('popup');
+                   
+            }); 
+        });
+    </script>
+    <body>
+        <div class='image-layout'>
+            <div class='image-row'>
+                <div class='image-frame'> 
+                    <a href='#1'>
+                    <img style='width:190px; height:190px;' src='image1.png'> </a>
+                </div>
+                <div class='image-frame'>
+                    <a href='#2'>
+                    <img style='width:190px; height:190px;' src='image2.jpeg'>  </a>
+                </div>
+                <div class='image-frame'>
+                    <a href='#3'>
+                    <img style='width:190px; height:190px;' src='image3.jpeg'> </a>
+                </div>
+            </div>
+            <div class='image-row'>
+                <div class='image-frame'>
+                    <a href='#4'>
+                    <img style='width:190px; height:190px;' src='image4.jpeg'> </a>
+                </div>
+                <div class='image-frame'>
+                    <a href='#12'>
+                    <img style='width:190px; height:190px;' src='image12.gif'> </a>
+                </div>
+                <div class='image-frame'>
+                    <a href='#6'>
+                    <img style='width:190px; height:190px;' src='image6.jpeg'> </a>
+                </div>               
+            </div>
+            <div class='image-row'>
+                <div class='image-frame'>
+                    <a href='#7'>
+                    <img style='width:190px; height:190px;' src='image7.jpeg'> </a>
+                </div>
+                <div class='image-frame'>
+                    <a href='#8'>
+                    <img style='width:190px; height:190px;' src='image8.jpeg'> </a>
+                </div>
+                <div class='image-frame'>
+                    <a href='#9'>
+                    <img style='width:190px; height:190px;' src='image9.jpeg'> </a>
+                </div>               
+            </div>
+            <div class='image-row'>
+                <div class='image-frame'>
+                    <a href='#10'>
+                    <img style='width:190px; height:190px;' src='image10.jpeg'> </a>
+                </div>
+                <div class='image-frame'>
+                    <a href='#11'>
+                    <img style='width:190px; height:190px;' src='image11.jpeg'> </a>
+                </div>
+                <div class='image-frame'>
+                    <a href='#5'>
+                    <img style='width:190px; height:190px;' src='image5.jpeg'> </a>
+                </div>               
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on the "Hide" button, I will disappear.</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+</body>
+</html>
+$(document).ready(function() {
+    // ẩn tất cả các thẻ div với class="tab_content".
+    $(".tab_content").hide();
+    // Mặc định nội dung thẻ tab đầu tiên sẽ được hiển thị
+    $(".tab_content:first").show();
+  
+    $("ul.tabs li").click(function() {
+        // gỡ bỏ class="active" cho tất cả các thẻ
+        $("ul.tabs li").removeClass("active");
+        // chèn class="active" vào phần tử </li> vừa được click
+        $(this).addClass("active");
+        // ẩn tất cả thẻ với class="tab_content"
+        $(".tab_content").hide();
+        //Hiển thị nội dung thẻ tab được click với hiệu ứng Fade In
+        var activeTab = $(this).attr("rel");
+        $("#"+activeTab).fadeIn();
+    });
+});
+
+Học Cùng Teacher Tom to Everyone (9:51 PM)
+.footer a {}
+.show { display: ‘flex’ }
+.active { display: ‘flex’ }
+Học Cùng Teacher Tom to Everyone (9:58 PM)
+Step 1: find “.active” (or “.show”) container => remove “.show” class then add “.hidden”
+Step 2: find the correct container (e.g: “#image-container”) => add class “.show” then remove class “.hidden”
+Me to Everyone (10:26 PM)
+tưởng nảy giờ lén đi tắmmm :))
+Học Cùng Teacher Tom to Everyone (10:43 PM)
+Gợi ý: thẻ a.a-general của em sẽ cần như vầy
+<a class=“a-general” data-container=“diary-container”></a>
+Học Cùng Teacher Tom to Everyone (10:45 PM)
+<a class=“a-general” data-container=“image-container”>Image</a>
+Me to Everyone (10:56 PM)
+Cron time
+Học Cùng Teacher Tom to Everyone (11:09 PM)
+https://www.youtube.com/watch?v=3nrLc_JOF7k&list=PLillGF-RfqbYJVXBgZ_nA7FTAAEpp_IAc
+https://api.jquery.com/addclass/
+https://api.jquery.com/removeclass/
+https://api.jquery.com/attr/
+Học Cùng Teacher Tom to Everyone (11:15 PM)
+$(this)
+
+<div class='row'>
+    <div class='cell'>
+        <div class="popup" onclick="myFunction()"> 2006
+            <span class="popuptext" id="myPopup"></span> </div>
+            <script>
+                function myFunction() {
+                  var popup = document.getElementById("myPopup");
+                  popup.classList.toggle("show");
+                }
+            </script>
+        </div>
+        <div class='cell'>
+            <div class="popup" onclick="myFunction()"> 2007
+                <span class="popuptext" id="myPopup"></span> </div>
+                <script>
+                    function myFunction() {
+                      var popup = document.getElementById("myPopup");
+                      popup.classList.toggle("show");
+                    }
+                </script>
+            </div>
