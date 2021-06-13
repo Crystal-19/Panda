@@ -86,3 +86,63 @@ $(this)
                     }
                 </script>
             </div>
+
+<a class=“a-general” data-container=“diary-container”>Diary</a>
+attr()
+<em title=“huge, gigantic”>large</em>
+const title = $( “em” ).attr( “title” );
+<em class=“abc” title=“huge” someattr=“itsme” ngan=“bucboia”>textaa<em>
+const class1 = $(“em”).attr(“class”)
+Const something = $(“em”).attr(“someattr”)
+$(“em”).html()
+$(‘a-general’).click(function() { $(this).attr(‘ })
+
+<a class=“a-general” data-container=“diary-container”>Diary</a>
+$(‘a-general’).click(function() { const containerId = $(this).attr(‘data’-container’)
+$(containerId).addClass(‘show’)
+containerID sẽ có giá trị là “diary-container”
+$(‘#’ + containerId).addClass(‘show’)
+
+
+<script>
+$(function() {
+    // Mở popup
+    $('[popup-open]').on('click', function() {
+        var popup_name = $(this).attr('popup-open');
+  $('[popup-name="' + popup_name + '"]').fadeIn(300);
+    });
+ 
+    // Đóng popup
+    $('[popup-close]').on('click', function() {
+  var popup_name = $(this).attr('popup-close');
+  $('[popup-name="' + popup_name + '"]').fadeOut(300);
+    });
+  
+    // Đóng popup khi click ra ngoài
+    $('.popup').on('click', function() {
+  var popup_name = $(this).find('[popup-close]').attr('popup-close');
+  $('[popup-name="' + popup_name + '"]').fadeOut(300);
+    }).children().click(function() {
+  return false;
+    });
+  
+});
+</script>
+
+<a class="open-button" popup-open="popup-1" href="javascript:void(0)">
+Click để mở popup 1</a>
+ 
+<div class="popup" popup-name="popup-1">
+    <div class="popup-content">
+    <h2>Tiêu đề popup</h2>
+<p>Sharescript.net là một trang web chia sẻ mã nguồn, script, template, và thủ thuật xoay quanh chủ đề website. Hy vọng bạn sẽ yêu thích nó!</p>
+<a class="close-button" popup-close="popup-1" href="javascript:void(0)">x</a>
+    </div>
+</div>
+
+ $(document).ready(function(){
+  $('.a-general').click(function(){
+    $('.show').removeClass('show').addClass('hidden');
+    const containerId= $(this).attr('data-container');
+    ('#' + containerId).addClass('show').removeClass('hidden');
+});

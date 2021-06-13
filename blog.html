@@ -1,0 +1,64 @@
+<!Doctype html>
+<html>
+    <meta name='viewport' content='width=device-width initial-scale=1.0'>
+    <title> Blog </title>
+    <head>
+        <script src='jquery.js'></script>
+        <style>
+            .container-odd{
+                display: flex;
+                height: 400px;
+                width: 90%;
+                justify-content: flex-start;
+                align-items: center;
+                margin-left: 100px;
+            }
+            .container-even{
+                display: flex;
+                height:400px;
+                width:90%;
+                justify-content: flex-end;
+                align-items: center;
+            }
+            .block{
+                display: flex;
+                height: 350px;
+                width: 700px;
+                background: white;
+                color: gray;
+                border: dashed pink;
+                flex-direction: column;
+                padding-left: 30px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div style="background-image: url('blog.gif'); height:100%; width:100%;"> 
+            <div class='container-odd'>
+                <div class='block'>
+                    <h1 style="font-family: cursive;"> Life </h1> 
+                    <p> Ngan la mot co gai dang yeu nhat tren doi</p>
+                </div>
+            </div>
+            <div class='container-even'>
+                <div class='block'> 
+                    <h1 style="font-family: cursive;"> Love </h1>
+                    <p> Ngan la mot co gai tot bung nhat tren doi</p>
+                </div>
+            </div>
+            <div class='container-odd'>
+                <div class='block'> 
+                    <h1 style="font-family: cursive;"> Experience </h1>
+                    <p> Ngan la mot co gai that tha nhat tren doi</p>
+                </div>
+            </div>
+            <div class='container-even'>
+                <div class='block'> 
+                    <h1 style="font-family: cursive;"> Friend </h1>
+                    <p> Ngan la mot co gai hien lanh nhat tren doi</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
