@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on the "Hide" button, I will disappear.</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+</body>
+</html>
+$(document).ready(function() {
+    // ẩn tất cả các thẻ div với class="tab_content".
+    $(".tab_content").hide();
+    // Mặc định nội dung thẻ tab đầu tiên sẽ được hiển thị
+    $(".tab_content:first").show();
+  
+    $("ul.tabs li").click(function() {
+        // gỡ bỏ class="active" cho tất cả các thẻ
+        $("ul.tabs li").removeClass("active");
+        // chèn class="active" vào phần tử </li> vừa được click
+        $(this).addClass("active");
+        // ẩn tất cả thẻ với class="tab_content"
+        $(".tab_content").hide();
+        //Hiển thị nội dung thẻ tab được click với hiệu ứng Fade In
+        var activeTab = $(this).attr("rel");
+        $("#"+activeTab).fadeIn();
+    });
+});
+
+Học Cùng Teacher Tom to Everyone (9:51 PM)
+.footer a {}
+.show { display: ‘flex’ }
+.active { display: ‘flex’ }
+Học Cùng Teacher Tom to Everyone (9:58 PM)
+Step 1: find “.active” (or “.show”) container => remove “.show” class then add “.hidden”
+Step 2: find the correct container (e.g: “#image-container”) => add class “.show” then remove class “.hidden”
+Me to Everyone (10:26 PM)
+tưởng nảy giờ lén đi tắmmm :))
+Học Cùng Teacher Tom to Everyone (10:43 PM)
+Gợi ý: thẻ a.a-general của em sẽ cần như vầy
+<a class=“a-general” data-container=“diary-container”></a>
+Học Cùng Teacher Tom to Everyone (10:45 PM)
+<a class=“a-general” data-container=“image-container”>Image</a>
+Me to Everyone (10:56 PM)
+Cron time
+Học Cùng Teacher Tom to Everyone (11:09 PM)
+https://www.youtube.com/watch?v=3nrLc_JOF7k&list=PLillGF-RfqbYJVXBgZ_nA7FTAAEpp_IAc
+https://api.jquery.com/addclass/
+https://api.jquery.com/removeclass/
+https://api.jquery.com/attr/
+Học Cùng Teacher Tom to Everyone (11:15 PM)
+$(this)
+
+<div class='row'>
+    <div class='cell'>
+        <div class="popup" onclick="myFunction()"> 2006
+            <span class="popuptext" id="myPopup"></span> </div>
+            <script>
+                function myFunction() {
+                  var popup = document.getElementById("myPopup");
+                  popup.classList.toggle("show");
+                }
+            </script>
+        </div>
+        <div class='cell'>
+            <div class="popup" onclick="myFunction()"> 2007
+                <span class="popuptext" id="myPopup"></span> </div>
+                <script>
+                    function myFunction() {
+                      var popup = document.getElementById("myPopup");
+                      popup.classList.toggle("show");
+                    }
+                </script>
+            </div>
+
+<a class=“a-general” data-container=“diary-container”>Diary</a>
+attr()
+<em title=“huge, gigantic”>large</em>
+const title = $( “em” ).attr( “title” );
+<em class=“abc” title=“huge” someattr=“itsme” ngan=“bucboia”>textaa<em>
+const class1 = $(“em”).attr(“class”)
+Const something = $(“em”).attr(“someattr”)
+$(“em”).html()
+$(‘a-general’).click(function() { $(this).attr(‘ })
+
+<a class=“a-general” data-container=“diary-container”>Diary</a>
+$(‘a-general’).click(function() { const containerId = $(this).attr(‘data’-container’)
+$(containerId).addClass(‘show’)
+containerID sẽ có giá trị là “diary-container”
+$(‘#’ + containerId).addClass(‘show’)
+
+
+<script>
+$(function() {
+    // Mở popup
+    $('[popup-open]').on('click', function() {
+        var popup_name = $(this).attr('popup-open');
+  $('[popup-name="' + popup_name + '"]').fadeIn(300);
+    });
+ 
+    // Đóng popup
+    $('[popup-close]').on('click', function() {
+  var popup_name = $(this).attr('popup-close');
+  $('[popup-name="' + popup_name + '"]').fadeOut(300);
+    });
+  
+    // Đóng popup khi click ra ngoài
+    $('.popup').on('click', function() {
+  var popup_name = $(this).find('[popup-close]').attr('popup-close');
+  $('[popup-name="' + popup_name + '"]').fadeOut(300);
+    }).children().click(function() {
+  return false;
+    });
+  
+});
+</script>
+
+<a class="open-button" popup-open="popup-1" href="javascript:void(0)">
+Click để mở popup 1</a>
+ 
+<div class="popup" popup-name="popup-1">
+    <div class="popup-content">
+    <h2>Tiêu đề popup</h2>
+<p>Sharescript.net là một trang web chia sẻ mã nguồn, script, template, và thủ thuật xoay quanh chủ đề website. Hy vọng bạn sẽ yêu thích nó!</p>
+<a class="close-button" popup-close="popup-1" href="javascript:void(0)">x</a>
+    </div>
+</div>
+
+ $(document).ready(function(){
+  $('.a-general').click(function(){
+    $('.show').removeClass('show').addClass('hidden');
+    const containerId= $(this).attr('data-container');
+    ('#' + containerId).addClass('show').removeClass('hidden');
+});

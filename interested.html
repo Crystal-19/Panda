@@ -1,0 +1,184 @@
+<!Doctype html>
+<html>
+    <meta name='viewport' content='width=device-width initial-scale=1.0'>
+    <title> Interested </title>
+    <head>
+        <script src='jquery.js'></script>
+    <style>
+        .gray{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(194, 191, 191);
+            color: rgb(250, 117, 139);
+            font-family: cursive;
+            height: 80px;
+            width: 250px;
+            font-size: 250%;
+            text-decoration: none;
+        }
+        .pink{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(240, 210, 215);
+            color: gray;
+            font-family: cursive;
+            height: 80px;
+            width: 250px;
+            font-size: 250%;
+            text-decoration: none;
+        }
+        .white-frame{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: space-between;
+            width: 100%;
+            height: 500px;
+            background: white;
+        }
+        .pink-frame{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: space-between;
+            width: 100%;
+            height: 500px;
+            background:rgb(252, 226, 229);
+        }
+        .header-frame{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width:100%;
+            height: 100px;
+        }
+        .under-frame{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            height: 400px;
+        }
+        .cell1{
+            display: flex;
+            border: solid pink;
+            height: 350px;
+            width: 400px;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .cell2{
+            display: flex;
+            border: solid pink;
+            height: 350px;
+            width: 350px;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .cell3{
+            display: flex;
+            border: solid pink;
+            height: 350px;
+            width: 250px;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            color: pink;
+        }
+        #popup{
+            display: none;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #popup p{
+            width: 700px;
+            height: 400px;
+            background: rgb(243, 241, 241);
+            color:rgb(247, 56, 145)
+        }
+        .show{
+            display: flex;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.frame').click(function(){
+                $('.under-frame').fadeOut('slow');
+                $('.show').removeClass('show').addClass('hidden');
+                const desc = $(this).attr('interest');
+                $('#' + desc).addClass('show').removeClass('hidden');
+                $('#popup').css('display', 'flex');
+            })
+            $('#popup').click(function(){
+                $('#popup').hide();
+                $('.under-frame').fadeIn('slow');
+            })
+        })
+    </script>
+    </head>
+    <body>
+        <div id='popup'> 
+            <p class='show' id='travel' style='padding:30px;'>I'm a travelling lover</p>
+            <p class='hidden' id='coding' style='padding:30px;'> I'm a coding lover></p> 
+            <p class='hidden' id='beauty' style='padding:30px;'> I'm a beauty lover></p> 
+            <p class='hidden' id='art' style='padding:30px;'>I'm an artist lover></p> 
+        </div>
+        <div class='white-frame frame' interest='travel'>
+            <div class='header-frame'>
+                <img style='width:100px; height:100px; border-radius:100%;' src='travel-icon.jpeg'/>
+                <a class='pink' href='#travel'> Travel </a>    
+            </div>
+            <div class='under-frame'>
+                <a class='cell1' href='#1'> <img style='width:395px; height: 345px;' src='travel1.JPG'/> </a>
+                <a class='cell2' href='#2'> <img style='width:345px; height: 345px;' src='travel2.JPG'/> </a>
+                <a class='cell3' href='#3'> <img style='width:245px; height: 345px;' src='travel3.JPG'/> </a>
+            </div>
+        </div>
+        <div class='pink-frame frame' interest='coding'>
+            <div class='header-frame'>
+                <img style='width:100px; height:100px; border-radius:100%;' src='coding-icon.png'/>
+                <a class='gray' href='#coding'> Coding </a>    
+            </div>
+            <div class='under-frame'>
+                <a class='cell1' href='#1' style='border: solid gray;'> <img style='width:395px; height: 345px;' src='coding1.JPG'/> </a>
+                <a class='cell1' href='#2' style='border: solid gray;'> <img style='width:395px; height: 345px;' src='coding3.jpeg'/> </a>
+                <a class='cell3' href='#3' style='border: solid gray;'> <img style='width:245px; height: 345px;' src='coding2.jpeg'/> </a>
+            </div>
+        </div>
+        <div class='white-frame frame' interest='beauty'>
+            <div class='header-frame'>
+                <img style='width:100px; height:100px; border-radius:100%;' src='beauty-icon.png'/>
+                <a class='pink' href='#beauty' style='font-size: 150%;'> Beauty-Healthcare </a>    
+            </div>
+            <div class='under-frame'>
+                <a class='cell1' href='#1'> <img style='width:395px; height: 345px;' src='beauty1.JPG'/> </a>
+                <a class='cell2' href='#2'> <img style='width:345px; height: 345px;' src='beauty2.JPG'/> </a>
+                <a class='cell3' href='#3'> <img style='width:245px; height: 345px;' src='beauty3.JPG'/> </a>
+            </div>
+        </div>
+        <div class='pink-frame frame' interest='art'>
+            <div class='header-frame'>
+                <img style='width:100px; height:100px; border-radius:100%;' src='art-icon.jpeg'/>
+                <a class='gray' href='#art'> Arts </a>    
+            </div>
+            <div class='under-frame'>
+                <a class='cell1' href='#1' style='border: solid gray;'> <img style='width:395px; height: 345px;' src='art1.JPG'/> </a>
+                <a class='cell1' href='#2' style='border: solid gray;'> <img style='width:395px; height: 345px;' src='art2.JPG'/> </a>
+                <a class='cell3' href='#3' style='border: solid gray;'> <img style='width:245px; height: 345px;' src='art3.JPG'/> </a>
+            </div>
+        </div>
+    </body>
+</html>

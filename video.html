@@ -1,0 +1,141 @@
+<!Doctype html>
+<html>
+    <meta name='viewport' content='width=device-width initial-scale=1.0'>
+    <title> Video </title>
+    <head>
+        <script src='jquery.js'></script>
+    <style>
+        .video-layout{
+            display: flex;
+            flex-flow: column;
+            margin: 10px 30px 10px 30px;
+            justify-content: center;
+            align-items: center;
+            }
+        .video-row{
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .video-frame{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid pink;
+            color: rgb(255, 184, 215);
+            width: 200px;
+            height: 200px;
+            font-size: 150%;
+        }
+        .video-dimension{
+            width: 190px;
+            height: 190px;
+        }
+        #popup{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background: rgba(0,0,0,0.5);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #popup video{
+            width: 500px;
+            height: 500px;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.video-dimension').click(function(){
+                const source = $(this).children('source').attr('src');
+                $('#popup video').attr('src', source);
+                $('#popup').css('display','flex');    
+            }); 
+            $('#popup').click(function(){
+                $('#popup').hide();
+            });
+        });
+    </script> 
+    <body>
+        <div id='popup'> 
+            <video controls>
+                <source src='#empty'>
+            </video>
+        </div>
+        <div class='video-layout'>
+            <div class='video-row'>
+                <div class='video-frame'> 
+                    <video class='video-dimension' autoplay muted>
+                        <source src='video1.mov'>
+                    </video> 
+                </div>
+                <div class='video-frame'>
+                    <video class='video-dimension' autoplay muted>
+                        <source src='video2.mov'>
+                    </video> 
+                </div>
+                <div class='video-frame'>
+                    <video class='video-dimension' autoplay muted>
+                        <source src='video1.mov'>
+                    </video> 
+                </div>
+            </div>
+            <div class='video-row'>
+                <div class='video-frame'>
+                    <video class='video-dimension' autoplay muted>
+                        <source src='video1.mov'>
+                    </video> 
+                </div>
+                <div class='video-frame'>
+                    <video class='video-dimension' autoplay muted>
+                        <source src='video1.mov'>
+                    </video> 
+                </div>
+                <div class='video-frame'>
+                    <video class='video-dimension' autoplay muted>
+                        <source src='video1.mov'>
+                    </video> 
+                </div>               
+            </div>
+            <div class='video-row'>
+                <div class='video-frame'>
+                    <video class='video-dimension' autoplay muted>
+                        <source src='video1.mov'>
+                    </video> 
+                </div>
+                <div class='video-frame'>
+                    <video class='video-dimension' autoplay muted>
+                        <source src='video1.mov'>
+                    </video> 
+                </div>
+                <div class='video-frame'>
+                    <video class='video-dimension' autoplay muted>
+                        <source src='video1.mov'>
+                    </video> 
+                </div>               
+            </div>
+            <div class='video-row'>
+                <div class='video-frame'>
+                    <video class='video-dimension' autoplay muted>
+                        <source src='video1.mov'>
+                    </video> 
+                </div>
+                <div class='video-frame'>
+                    <video class='video-dimension' autoplay muted>
+                        <source src='video1.mov'>
+                    </video>  
+                </div>
+                <div class='video-frame'>
+                    <video class='video-dimension' autoplay muted>
+                        <source src='video1.mov'>
+                    </video> 
+                </div>               
+            </div>
+        </div>
+    </body>
+</html>
